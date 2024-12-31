@@ -18,7 +18,7 @@ Timezone CLI is a command-line tool built with Go and Cobra that allows you to q
 ## Installation
 
 ```bash
-go install github.com/yourusername/module
+go install github.com/meeklife/module
 ```
 
 ## Usage
