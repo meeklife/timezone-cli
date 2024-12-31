@@ -18,7 +18,7 @@ Timezone CLI is a command-line tool built with Go and Cobra that allows you to q
 ## Installation
 
 ```bash
-go install github.com/yourusername/moduleName
+go install github.com/yourusername/module
 ```
 
 ## Usage
@@ -26,12 +26,15 @@ go install github.com/yourusername/moduleName
 ### Basic Usage
 
 ```bash
-moduleName timezone GMT
+module timezone GMT
+```
+
+```bash
+module timezone Africa/Accra
 ```
 
 ### Date Formatting
 
 ```bash
-# Use date flag to specify custom date format
-moduleName timezone GMT --date format
+module timezone GMT --date 01/01/2000
 ```

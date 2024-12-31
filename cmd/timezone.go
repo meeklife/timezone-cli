@@ -24,7 +24,7 @@ var timezoneCmd = &cobra.Command{
 		timezone := args[0]
 		currentTime, err := getTimeInTimeZone(timezone)
 		if err != nil {
-			log.Fatalln("The timezone string is invalid")
+			log.Fatalln("The timezone is invalid")
 		}
 
 		location, _ := time.LoadLocation(timezone)
@@ -32,12 +32,9 @@ var timezoneCmd = &cobra.Command{
 		var date string
 
 		if dateFlag == "" {
-			date = time.Now().In(location).Format(dateFlag)
-			// fmt.Println(currentTime, date)
 			fmt.Printf("Current time & date is: %v %v\n", currentTime, date)
 		} else {
 			date = time.Now().In(location).Format(time.RFC3339)[:10]
-			// fmt.Printf("Current time & date in %v: %v %v\n", timezone, currentTime, date)
 			fmt.Printf("Current date in %v: %v\n", timezone, date)
 		}
 
